@@ -14,8 +14,7 @@ _Create two deployment workflows using GitHub Actions and Microsoft Azure._
 </header>
 
 <!--
-  <<< Author notes: Step 3 >>>
-  Start this step by acknowledging the previous step.
+ Start this step by acknowledging the previous step.
   Define terms and link to docs.github.com.
 -->
 
@@ -108,6 +107,7 @@ To deploy successfully to our Azure environment:
             uses: actions/checkout@v4
 
           - name: Azure login
+
             uses: azure/login@v2
             with:
               creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -156,6 +156,7 @@ The second job destroys Azure resources so that you do not use your free minutes
 1. Edit the `spinup-destroy.yml` file in your open pull request and replace any `<username>` placeholders with your GitHub username. Commit this change directly to the `azure-configuration` branch.
 1. Back in the Pull request, create and apply the `spin up environment` label to your open pull request
 1. Wait for the GitHub Actions workflow to run and spin up your Azure environment. You can follow along in the Actions tab or in the pull request merge box.
+
 1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
 
 <footer>
